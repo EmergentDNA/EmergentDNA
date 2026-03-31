@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Emergent DNA — minimal example</title>
+</head>
+<body>
+  <p>Open the console. Same seed produces identical expressed traits.</p>
+  <script src="../src/emergent-dna-core.js"></script>
+  <script>
+    var seed = 42;
+    var g = new EmergentDNA.SpeciesGenome(seed);
+    console.log('Rand', new EmergentDNA.Rand(seed).next());
+    console.log('traits', EmergentDNA.expressIndividual(g));
+  </script>
+</body>
+</html>

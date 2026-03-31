@@ -1,0 +1,26 @@
+{
+  "name": "emergent-dna",
+  "version": "1.0.0",
+  "description": "Canonical genotype layer for Emergent DNA — seeded PRNG, species genome helpers (no renderer, no lifecycle clock).",
+  "main": "src/emergent-dna-core.js",
+  "files": [
+    "src/",
+    "docs/",
+    "examples/",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "generative-art",
+    "prng",
+    "seeded",
+    "emergent-dna"
+  ],
+  "author": "Mark Walhimer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmergentDNA/EmergentDNA.git"
+  },
+  "homepage": "https://github.com/EmergentDNA/EmergentDNA#readme"
+}

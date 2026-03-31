@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emergent DNA — canonical spec</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #111; }
+    h1 { font-weight: 600; font-size: 1.35rem; }
+    a { color: #0a58ca; }
+    pre { background: #f4f4f5; padding: 1rem; overflow: auto; font-size: 0.8rem; }
+    .muted { color: #555; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Emergent DNA</h1>
+  <p class="muted">Canonical <strong>genotype</strong> layer — seed + <code>Rand</code> / <code>SeedRng</code>, optional <code>SpeciesGenome</code>. No renderer; no lifecycle clock.</p>
+  <p>
+    <a href="https://github.com/EmergentDNA/EmergentDNA">Repository</a>
+    · <a href="./SPEC.md">SPEC.md</a> (on GitHub, use Raw)
+  </p>
+
+  <h2>Live check</h2>
+  <p>Same seed → same trait object (deterministic):</p>
+  <pre id="out">Loading…</pre>
+
+  <script src="./js/emergent-dna-core.js"></script>
+  <script>
+    var seed = 0x3a91c2;
+    var g = new EmergentDNA.SpeciesGenome(seed);
+    var a = EmergentDNA.expressIndividual(g);
+    var g2 = new EmergentDNA.SpeciesGenome(seed);
+    var b = EmergentDNA.expressIndividual(g2);
+    document.getElementById('out').textContent =
+      JSON.stringify({ seed: seed, traits: a, matchesRepeat: JSON.stringify(a) === JSON.stringify(b) }, null, 2);
+  </script>
+</body>
+</html>
