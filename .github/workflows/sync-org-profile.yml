@@ -36,5 +36,5 @@ jobs:
             echo "No changes to org profile."
             exit 0
           fi
-          git commit -m "Sync org profile from walhimer/EmergentDNA"
+          git commit -m "Sync org profile from EmergentDNA/EmergentDNA"
           git push

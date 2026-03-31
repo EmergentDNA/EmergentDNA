@@ -11,7 +11,7 @@ When you edit **`org-profile/README.md`** on **`main`** and push, the workflow *
    - Repository access: **Only select repositories** → **`.github`**
    - Permissions: **Contents** → Read and write
 
-3. In **[walhimer/EmergentDNA](https://github.com/walhimer/EmergentDNA)** → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**:
+3. In **[EmergentDNA/EmergentDNA](https://github.com/EmergentDNA/EmergentDNA)** → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**:
    - Name: **`ORG_DOTGITHUB_TOKEN`**
    - Value: the token
 
@@ -28,4 +28,4 @@ When you edit **`org-profile/README.md`** on **`main`** and push, the workflow *
 
 ## Scope
 
-This only updates the **org README** (`profile/README.md`). It does not mirror the whole **walhimer/EmergentDNA** codebase into the org; the org still points to your user repo for the canonical spec.
+This only updates the **org README** (`profile/README.md`). It does not duplicate the whole codebase; the canonical spec remains **[EmergentDNA/EmergentDNA](https://github.com/EmergentDNA/EmergentDNA)**.

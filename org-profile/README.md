@@ -6,7 +6,7 @@
 
 | Resource | Role |
 |----------|------|
-| **[walhimer/EmergentDNA](https://github.com/walhimer/EmergentDNA)** | Reference implementation: canonical **`Rand`** / **`SeedRng`**, optional **`SpeciesGenome`** + **`expressIndividual`** (genotype only; no renderer, no audio). |
+| **[EmergentDNA/EmergentDNA](https://github.com/EmergentDNA/EmergentDNA)** | Reference implementation: canonical **`Rand`** / **`SeedRng`**, optional **`SpeciesGenome`** + **`expressIndividual`** (genotype only; no renderer, no audio). |
 | **Releases** | Tagged versions (semver). Pin integrations to a release tag. |
 
 **Three DNA types (conceptual):** **Seeded** (integer seed → PRNG), **Relational** (viewer / co-presence input), **Hybrid** (seeded structure + intentional unseeded surface).  
@@ -20,7 +20,7 @@ Seeded pieces use one **`Rand`** constructor everywhere — see the spec repo `d
 
 Earlier experiments described a **distributed kinetic organism**, **DAO**, and **real-time parameter streams** mapped to hardware. That narrative may live in **archived** repositories under this org and is **not** the definition of the browser **genome** spec above.
 
-If you landed from old links: use **[walhimer/EmergentDNA](https://github.com/walhimer/EmergentDNA)** for the current **code + law**.
+If you landed from old links: use **[EmergentDNA/EmergentDNA](https://github.com/EmergentDNA/EmergentDNA)** for the current **code + law**.
 
 ---
 
