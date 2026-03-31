@@ -1,0 +1,40 @@
+# Copies org-profile/README.md → EmergentDNA/.github/profile/README.md
+# Requires repo secret ORG_DOTGITHUB_TOKEN (see docs/ORG_PROFILE_SYNC.md)
+name: Sync org profile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'org-profile/README.md'
+      - '.github/workflows/sync-org-profile.yml'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Checkout EmergentDNA/.github
+        uses: actions/checkout@v4
+        with:
+          repository: EmergentDNA/.github
+          token: ${{ secrets.ORG_DOTGITHUB_TOKEN }}
+          path: dotgithub
+
+      - name: Copy profile README
+        run: |
+          mkdir -p dotgithub/profile
+          cp org-profile/README.md dotgithub/profile/README.md
+          cd dotgithub
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          if git diff --cached --quiet; then
+            echo "No changes to org profile."
+            exit 0
+          fi
+          git commit -m "Sync org profile from walhimer/EmergentDNA"
+          git push

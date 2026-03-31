@@ -42,6 +42,11 @@ See **`docs/SPEC.md`** for the three DNA types (Seeded / Relational / Hybrid) an
 | `docs/SPEC.md` | Conceptual + canonical `Rand` |
 | `docs/index.html` | Landing for GitHub Pages |
 | `examples/minimal.html` | Local demo |
+| `org-profile/README.md` | Source for [EmergentDNA](https://github.com/EmergentDNA) org homepage (synced by Actions — see below) |
+
+## Organization homepage ([EmergentDNA](https://github.com/EmergentDNA))
+
+Edit **`org-profile/README.md`** in this repo. On push to **`main`**, a workflow copies it to **`EmergentDNA/.github/profile/README.md`** so the org overview stays aligned with this spec. **One-time:** add the **`ORG_DOTGITHUB_TOKEN`** secret — see **`docs/ORG_PROFILE_SYNC.md`**.
 
 ## Versioning
 
