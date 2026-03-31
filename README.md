@@ -7,7 +7,7 @@ This repository is the **reference implementation** of **Emergent DNA** as a **g
 **Script tag (global):**
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/EmergentDNA/EmergentDNA@1.0.0/src/emergent-dna-core.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/walhimer/EmergentDNA@1.0.0/src/emergent-dna-core.js"></script>
 <script>
   var rng = new EmergentDNA.SeedRng(12345);
   // Alias matching Document 5 naming:
