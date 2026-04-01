@@ -14,11 +14,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      # v5 runs on Node 24 (avoids Node 20 deprecation warning for checkout@v4)
       - name: Checkout this repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Checkout EmergentDNA/.github
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: EmergentDNA/.github
           token: ${{ secrets.ORG_DOTGITHUB_TOKEN }}
