@@ -18,10 +18,14 @@ This repository is the **reference implementation** of **Emergent DNA** as a **g
 **Node / bundler:**
 
 ```javascript
-const { SeedRng, Rand, SpeciesGenome, expressIndividual } = require('./src/emergent-dna-core.js');
+const { SeedRng, Rand, SpeciesGenome, expressIndividual, SocialPool, nudgeSpeciesFromPool } = require('./src/emergent-dna-core.js');
 ```
 
 (Tag a release instead of `@main` in production.)
+
+### Social learning (ecology-adjacent)
+
+Runs can **record** trait snapshots into a **`SocialPool`**, then **nudge** new genomes toward that shared memory (optional `localStorage` via `storageKey`). Peers in the same cohort can **`learnFromPeers`**. See **`docs/SPEC.md`** — pool state is not part of pure seed replay unless you restore the same pool.
 
 ## Canonical random engine
 

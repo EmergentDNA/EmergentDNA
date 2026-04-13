@@ -1,7 +1,7 @@
 {
   "name": "emergent-dna",
-  "version": "1.0.0",
-  "description": "Canonical genotype layer for Emergent DNA — seeded PRNG, species genome helpers (no renderer, no lifecycle clock).",
+  "version": "1.1.0",
+  "description": "Canonical genotype layer for Emergent DNA — seeded PRNG, species genome helpers, optional social pool / peer learning (no renderer, no lifecycle clock).",
   "main": "src/emergent-dna-core.js",
   "files": [
     "src/",

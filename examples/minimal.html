@@ -5,13 +5,18 @@
   <title>Emergent DNA — minimal example</title>
 </head>
 <body>
-  <p>Open the console. Same seed produces identical expressed traits.</p>
+  <p>Open the console. Same seed produces identical expressed traits. Social pool nudging is optional.</p>
   <script src="../src/emergent-dna-core.js"></script>
   <script>
     var seed = 42;
     var g = new EmergentDNA.SpeciesGenome(seed);
     console.log('Rand', new EmergentDNA.Rand(seed).next());
     console.log('traits', EmergentDNA.expressIndividual(g));
+    var pool = new EmergentDNA.SocialPool();
+    pool.record({ speciesTraits: g.speciesTraits, extra: g._extra });
+    var g2 = new EmergentDNA.SpeciesGenome(seed);
+    EmergentDNA.nudgeSpeciesFromPool(g2, pool, 0.1);
+    console.log('traits after social nudge (same seed)', EmergentDNA.expressIndividual(g2));
   </script>
 </body>
 </html>

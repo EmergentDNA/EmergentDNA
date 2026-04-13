@@ -68,6 +68,24 @@ In **`emergent-dna-core.js`**, the same implementation is exposed as **`SeedRng`
 
 ---
 
+## Social learning layer (v1.1+)
+
+Some works treat the series as an **ecology**: entities are not isolated; they leave traces and later runs (or siblings in the same run) can **bias** new genomes toward what came before.
+
+The reference implementation adds:
+
+| API | Role |
+|-----|------|
+| **`SocialPool`** | Running aggregate of recorded trait snapshots (`record`, `centroid`, `clear`). Optional `storageKey` persists to **`localStorage`** under that key (browser only). |
+| **`nudgeSpeciesFromPool(species, pool, alpha)`** | Lerps `species.speciesTraits` (and overlapping `_extra` genes) toward the pool centroid. Call after **`SpeciesGenome`** construction, usually before **`expressIndividual`**. `alpha` ∈ [0, 1]. |
+| **`learnFromPeers(species, peers, alpha)`** | Lerps toward the **average** of an array of peer genomes (cohort / same-frame neighbors). |
+
+**Determinism:** Pure seed replay holds only if the **pool is empty or identical**. Saving a pool changes the expressed phenotype without changing the base seed — document that in the piece if it matters for your audience.
+
+**Recording:** Call **`pool.record({ speciesTraits, extra })`** when an entity dies, a run ends, or on a heartbeat you define in **ecology** (this repo still does not schedule those events).
+
+---
+
 ## Piece reference (from Document 5 table)
 
 | Piece | DNA type | Rand? |
