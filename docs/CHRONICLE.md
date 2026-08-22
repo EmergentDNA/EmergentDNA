@@ -47,21 +47,31 @@ Same practice; different altitude. Prefer **Machine DNA** in grants, catalogs, a
 
 ---
 
-## Many species (not one forever project)
+## Many species = many nests
 
-Machine DNA is a **studio system**, not a single artwork. You can run **many species** side by side across years:
+Machine DNA is a **studio system**, not a single artwork. A **species** is one **nest** — usually one **catalog series**. Which animal metaphor you use does not matter (birds, machines, flowers, mirrors). What matters:
 
-| | |
-|-|-|
-| **Today** | e.g. Centered / One Row — one species, its seeds, lifeline, bodies |
-| **Six months later** | Mint a **new species** (new `speciesId`, new trait/gene contract, new catalog series) |
-| **Meanwhile** | The previous species **keeps existing** — its seeds still replay, its N150 / Black Dove / wall bodies still valid |
+| Studio word | Means |
+|-------------|--------|
+| **Nest / species / series** | Shared genome contract (`speciesId`, catalog folder, temperament of the line) |
+| **Egg / individual / artwork** | One seed’s life inside that nest — short, long, aggressive, protected, quiet… |
 
-A species is a **lineage with one shared contract**. New species = new contract. Do not silently mutate an old species’ gene schema under published seeds; that breaks replay. Evolve by **generation within a species**, or by **founding a new species**.
+For the current discussion it almost does not matter *which* nest you point at. Black Dove / N150 / sound / slice rules apply the same way: pick a nest, mint artworks, each artwork has its own life.
 
-**Examples of distinct species (illustrative):** Centered · Invisible Layer · Surrender Machines · Bloom — each its own `speciesId`, catalog path, and bodies.
+### Studio nests (examples — not closed)
 
-Species can carry different temperaments. **Surrender Machines**, for example, is the species where the machine practices yield — ego, agency, pride, and attachment stay human; the machine is somewhere else for surrender to happen until you can take more of it yourself. That story lives with the species; the *system* rule is: many species, one Machine DNA contract.
+| Nest (species / series) | What lives there (phenotype sketch) |
+|-------------------------|-------------------------------------|
+| **Centered** | One **column**, ~30 rows; square · portrait · landscape (often nicknamed “One Row” in filenames — the form is a column of rows) |
+| **Fluid Dynamics** | Viscosity / mix worlds |
+| **Surrender Machines** | Machines with adjustable sliders; smartphone / iPhone co-creation interface |
+| **Witness Mirror** | DeepFace / machine-learning face·emotion mirrors |
+| **Invisible Layer** | RGB ↔ XYZ ping-pong on the GPU |
+| **Bloom** | Flower / seeded bloom series |
+
+Found a new nest anytime. Old nests keep living. Do not silently mutate an old nest’s gene schema under published seeds.
+
+Temperament lives **with the nest**. Example: Surrender Machines is where the machine practices yield so ego can stay human awhile. That story belongs to that nest; Machine DNA only requires: many nests, one system contract.
 
 ---
 
@@ -69,8 +79,8 @@ Species can carry different temperaments. **Surrender Machines**, for example, i
 
 | Type | DNA is… | `Rand`? | Examples |
 |------|---------|---------|----------|
-| **1 — Seeded** | Integer seed → all varying params through `Rand` | Required | Bloom, Traveling Landscape, **Centered / One Row → Black Dove** |
-| **2 — Relational** | People present / live input | **No** (no hidden seed for uniqueness) | Shared Ground, Living Commons |
+| **1 — Seeded** | Integer seed → all varying params through `Rand` | Required | Bloom, Centered (column/30-row) → Black Dove, Traveling Landscape |
+| **2 — Relational** | People present / live input | **No** (no hidden seed for uniqueness) | Shared Ground, Living Commons; Witness Mirror / Surrender may lean here when co-presence is the DNA |
 | **3 — Hybrid** | Seeded structural core + intentional unseeded surface | Structural core only | Surrender Machines (target) |
 
 Black Dove / N150 narrative pieces are **Type 1** unless you explicitly document otherwise. Do not plan Type 1 delivery seeds and Type 2 board pieces as the same organism.
@@ -82,18 +92,18 @@ Black Dove / N150 narrative pieces are **Type 1** unless you explicitly document
 | Term | Meaning | Not this |
 |------|---------|----------|
 | **DNA / genome** | Seed + PRNG + trait rules (this repo) | Not the MP4; not the p5 file alone |
-| **Species** | One lineage with a shared trait/gene contract (`speciesId` / catalog series). Many species can coexist; founding a new one does not retire the old | Not “Machine DNA” (= the whole system); not one sketch file |
-| **Individual** | One artwork — one egg in the nest; one seed’s life under a species | Not “all pieces share one 8‑minute life” |
+| **Nest / Species / Series** | One lineage with a shared contract (`speciesId` / catalog series). Many nests coexist | Not “Machine DNA” (= the whole system); not one sketch file |
+| **Egg / Individual / Artwork** | One seed’s life inside a nest | Not “all pieces share one 8‑minute life” |
 | **Organism** | That artwork running: its age, temperament, events, survival or death | Not a static export |
 | **Body** | Host channel: browser, N150, wall, Black Dove file, OF, PD, LED | Not a convenience fork of the art |
 | **Expression** | Phenotype reads the same snapshot — `visualExpress` · `soundExpress` | Not a second PRNG; not “soundtrack later” |
-| **Lifeline** | **Life itself** — birth, events, temperament, death or survival — not a studio clock. Duration (if any) is per species; some lives end by event, not by timer | Not “always 8 minutes”; not `480000` unless that species documents a timer; not camera Z; not clip length |
-| **Narrative arc** | What *happens* in that life — the story ecology writes | Not a countdown bar alone |
+| **Lifeline** | **Life itself** for that artwork — birth, events, temperament, death or survival — not a studio clock | Not “always 8 minutes”; not `480000` unless *that* artwork documents a timer; not camera Z; not clip length |
+| **Narrative arc** | What *happens* in that life | Not a countdown bar alone |
 | **Solidification** | Freeze one seeded run (genome + clock + both expressions) for replay | Not A/V from two different processes |
 | **Slice / excerpt** | Timed window of a solidified run (e.g. 2 min Black Dove) | Not the whole life compressed |
 | **Social / chronicle learning** | `SocialPool` / scar events biasing later individuals | Not pixel or audio stream sync |
 
-**Mnemonic:** *Genotype in Machine-DNA. Ecology in the piece. Phenotype consumes traits. Bodies are where it plays. Many species over time.*
+**Mnemonic:** *Genotype in Machine-DNA. Nest = species. Artwork = individual life. Ecology in the piece. Phenotype consumes traits. Bodies are where it plays.*
 
 ---
 
@@ -127,22 +137,22 @@ Same tick. Same snapshot. Neither masters the other.
 
 **Lifeline is life — not eight minutes.**
 
-Teaching picture (compose your own species; this is the idea, not a required plot):
+Optional teaching picture (any nest metaphor works; birds are not required):
 
-> There are bird eggs. **Each egg is an artwork** — an individual born from the species’ genome (a seed). They hatch. Some are born and die very quickly. Some are aggressive and kill other newborns. Some are protected by the mother. Some are neutral and live a long life.
+> In a nest, **each egg is an artwork**. They hatch. Some are born and die very quickly. Some are aggressive and kill other newborns. Some are protected. Some are neutral and live a long life.
 
-There is **no set pattern** and **no shared stopwatch**. One artwork’s life is not another’s. That is why agents must never force every piece to `480000` ms / eight minutes — that was One Row convenience code, not Machine DNA.
+There is **no set pattern** and **no shared stopwatch**. One artwork’s life is not another’s. Agents must never force every piece to `480000` ms / eight minutes — that was Centered (“One Row” filename) convenience code, not Machine DNA.
 
 **Lifeline means:**
 
 - each **artwork** (individual / seed) has a **life** of its own  
-- **things happen** in that life (aggression, protection, fall, scar, surrender, survival)  
-- outcomes and duration **differ per artwork** — short life, long life, cut short by conflict, carried by care  
-- end may be **event-driven**, **narrative completion**, **species rules**, or — only if *that* artwork’s catalog entry says so — a **timer**  
+- **things happen** in that life  
+- outcomes and duration **differ per artwork**  
+- end may be **event-driven**, **narrative completion**, **nest rules**, or — only if *that* artwork’s catalog entry says so — a **timer**  
 
-Before setting `LIFESPAN_MS` (or equivalent) in code, read **`catalog/{species}/{artwork}.md` for that piece**. Agents must **not** impose `480000` unless that catalog entry says so.
+Before setting `LIFESPAN_MS` (or equivalent) in code, read **`catalog/{series}/{artwork}.md` for that piece**. Agents must **not** impose `480000` unless that catalog entry says so.
 
-Sound and image co-create that life’s shape (compose per species), e.g.:
+Sound and image co-create that life’s shape (compose per nest), e.g.:
 
 - Slow → pulse → crescendo → taper  
 - Strong → hold → drop → second crest → **silence → black** → rebirth  
