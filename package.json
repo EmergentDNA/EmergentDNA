@@ -1,7 +1,7 @@
 {
   "name": "emergent-dna",
   "version": "1.1.0",
-  "description": "Canonical genotype layer for Emergent DNA — seeded PRNG, species genome helpers, optional social pool / peer learning (no renderer, no lifecycle clock).",
+  "description": "Machine DNA genotype layer — seeded PRNG, species genome helpers, optional social pool (no renderer, no lifecycle). Studio meaning: docs/CHRONICLE.md.",
   "main": "src/emergent-dna-core.js",
   "files": [
     "src/",
@@ -11,16 +11,17 @@
     "LICENSE"
   ],
   "keywords": [
+    "machine-dna",
+    "emergent-dna",
     "generative-art",
     "prng",
-    "seeded",
-    "emergent-dna"
+    "seeded"
   ],
   "author": "Mark Walhimer",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/EmergentDNA/EmergentDNA.git"
+    "url": "https://github.com/walhimer-studio/Machine-DNA.git"
   },
-  "homepage": "https://github.com/EmergentDNA/EmergentDNA#readme"
+  "homepage": "https://github.com/walhimer-studio/Machine-DNA#readme"
 }

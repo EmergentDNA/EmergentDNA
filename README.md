@@ -1,13 +1,25 @@
-# Emergent DNA — canonical genotype
+# Machine DNA
 
-This repository is the **reference implementation** of **Emergent DNA** as a **genome layer**: seeded deterministic randomness and optional trait bundles for **individuals of a species**. It does **not** include Three.js, p5.js, WebGL, Tone.js, spawn timers, or death waves — those are **phenotype** and **ecology** in your pieces.
+**Canonical genotype + studio meaning** for Walhimer Studio generative work.
+
+| Doc | Role |
+|-----|------|
+| **[`docs/CHRONICLE.md`](docs/CHRONICLE.md)** | **What Machine DNA means** — species, bodies, lifeline, co-created sound+image, solidification. Start here. |
+| **[`docs/SPEC.md`](docs/SPEC.md)** | Genotype law — Type 1 / 2 / 3, canonical `Rand` / `SeedRng` (Document 5) |
+| **`src/emergent-dna-core.js`** | Reference implementation (no renderer, no lifecycle clock) |
+
+Piece repos (e.g. [walhimer.github.io](https://github.com/walhimer-studio/walhimer.github.io)) hold ecology and phenotype. They **point here** for meaning; they do not redefine it.
+
+**Naming:** *Machine DNA* = preferred studio name. *Emergent DNA* = historical / package name for this genotype code. Same practice.
+
+---
 
 ## Install
 
 **Script tag (global):**
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/EmergentDNA/EmergentDNA@1.0.0/src/emergent-dna-core.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/walhimer-studio/Machine-DNA@main/src/emergent-dna-core.js"></script>
 <script>
   var rng = new EmergentDNA.SeedRng(12345);
   // Alias matching Document 5 naming:
@@ -15,13 +27,13 @@ This repository is the **reference implementation** of **Emergent DNA** as a **g
 </script>
 ```
 
+Prefer a **semver tag** instead of `@main` in production.
+
 **Node / bundler:**
 
 ```javascript
 const { SeedRng, Rand, SpeciesGenome, expressIndividual, SocialPool, nudgeSpeciesFromPool } = require('./src/emergent-dna-core.js');
 ```
-
-(Tag a release instead of `@main` in production.)
 
 ### Social learning (ecology-adjacent)
 
@@ -36,21 +48,22 @@ constructor(seed) { this.s = (seed >>> 0) || 1; }
 next() { const x = Math.sin(this.s++) * 10000; return x - Math.floor(x); }
 ```
 
-See **`docs/SPEC.md`** for the three DNA types (Seeded / Relational / Hybrid) and rules copied from the ARS *system-prompt* Document 5.
+See **`docs/SPEC.md`**. Known tension with hash/`splitmix32` for cross-engine bit-exact replay is documented in **`docs/CHRONICLE.md`** — do not switch under a published seed without a major version bump.
 
 ## Layout
 
 | Path | Contents |
 |------|----------|
+| `docs/CHRONICLE.md` | **Machine DNA meaning** (canonical across studio) |
+| `docs/SPEC.md` | Type 1/2/3 + canonical `Rand` |
 | `src/emergent-dna-core.js` | Implementation |
-| `docs/SPEC.md` | Conceptual + canonical `Rand` |
-| `docs/index.html` | Landing for GitHub Pages |
+| `docs/index.html` | GitHub Pages landing |
 | `examples/minimal.html` | Local demo |
-| `org-profile/README.md` | Source for [EmergentDNA](https://github.com/EmergentDNA) org homepage (synced by Actions — see below) |
+| `org-profile/README.md` | Source for [EmergentDNA](https://github.com/EmergentDNA) org homepage (Actions sync) |
 
 ## Organization homepage ([EmergentDNA](https://github.com/EmergentDNA))
 
-Edit **`org-profile/README.md`** in this repo. On push to **`main`**, a workflow copies it to **`EmergentDNA/.github/profile/README.md`** so the org overview stays aligned with this spec. **One-time:** add the **`ORG_DOTGITHUB_TOKEN`** secret — see **`docs/ORG_PROFILE_SYNC.md`**.
+Edit **`org-profile/README.md`**. On push to **`main`**, a workflow may copy it to **`EmergentDNA/.github/profile/README.md`**. See **`docs/ORG_PROFILE_SYNC.md`**.
 
 ## Versioning
 

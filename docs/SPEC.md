@@ -2,15 +2,21 @@
 
 This file summarizes **Document 5** from the ARS *system-prompt* workflow. If this file and the full Document 5 ever disagree, **reconcile them** and bump the spec version.
 
+**Studio meaning (Machine DNA):** see **[`CHRONICLE.md`](./CHRONICLE.md)** first — many species, ecology, phenotype, bodies, solidification. **This file** is genotype law only (`Rand`, Type 1/2/3).
+
+**Naming:** *Machine DNA* = preferred system name. *Emergent DNA* = this genotype mechanism / historical Document 5 title.
+
 ---
 
 ## Definition
 
-Every piece in this body of work can produce a visual state that has never existed before and will never exist again in exactly that form. **Emergent DNA** is the mechanism that makes this true. It is **not** the artwork. It is **not** the visual logic, the color palette, or the physics. It is the **source of uniqueness** — the input that, when fed into the piece’s rules, determines exactly which version of that piece you are seeing at this moment.
+Every piece in this body of work can produce a visual state that has never existed before and will never exist again in exactly that form. **Emergent DNA** (the genotype) is the mechanism that makes this true. It is **not** the artwork. It is **not** the visual logic, the color palette, or the physics. It is the **source of uniqueness** — the input that, when fed into the piece’s rules, determines exactly which version of that piece you are seeing at this moment.
 
-The word *emergent* is precise. **The DNA does not draw anything.** It is a number, a position, or a sequence of inputs that the system transforms into a specific world. The same rules applied to different DNA produce a completely different world. The same rules applied to the same DNA reproduce that world exactly.
+The word *emergent* is precise for the genotype. **The DNA does not draw anything.** It is a number, a position, or a sequence of inputs that the system transforms into a specific world. The same rules applied to different DNA produce a completely different world. The same rules applied to the same DNA reproduce that world exactly.
 
 **This repository** implements the **Seeded** stream as **`Rand` / `SeedRng`** plus optional **species / individual** helpers. **Relational** and **Hybrid** types are defined by rules below; they do not require this JS file when the piece correctly avoids hidden seeds.
+
+**Many species:** each species has its own contract (`speciesId` / trait schema). Founding a new species later does not retire earlier ones — see chronicle.
 
 ---
 
@@ -66,6 +72,8 @@ In **`emergent-dna-core.js`**, the same implementation is exposed as **`SeedRng`
 | **Lifecycle / ecology** | When entities spawn, hold, die — **not** in this core file. |
 | **Phenotype** | Three.js, p5, WebGL, pixels, sound — **consumes** traits. |
 
+Full studio contract (bodies, lifeline, co-created A/V, slices): **[`CHRONICLE.md`](./CHRONICLE.md)**.
+
 ---
 
 ## Social learning layer (v1.1+)
@@ -95,3 +103,4 @@ The reference implementation adds:
 | Surrender Machines | Hybrid | Structural seed (target: canonical Rand) |
 | Shared Ground | Relational | No |
 | Living Commons | Relational | No |
+| Centered / One Row (Black Dove body) | Seeded (Type 1) | Yes |
