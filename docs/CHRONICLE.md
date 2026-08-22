@@ -87,8 +87,8 @@ Black Dove / N150 narrative pieces are **Type 1** unless you explicitly document
 | **Organism** | Running life: age, stage, phases (ecology) | Not a static export |
 | **Body** | Host channel: browser, N150, wall, Black Dove file, OF, PD, LED | Not a convenience fork of the art |
 | **Expression** | Phenotype reads the same snapshot — `visualExpress` · `soundExpress` | Not a second PRNG; not “soundtrack later” |
-| **Lifeline** | Ecology of a life: aging, stages, end condition (death / rebirth / silence→black). **Duration is per species** — read catalog / `{artwork}.md`; never assume a studio-wide constant | Not 8 minutes globally; not `480000` unless that species documents it; not camera Z; not clip length |
-| **Narrative arc** | Dramatic shape *inside* one life — things happen; build, crest, fall, silence | Not the same as lifeline duration; arc can complete before or after a nominal lifespan |
+| **Lifeline** | **Life itself** — birth, events, temperament, death or survival — not a studio clock. Duration (if any) is per species; some lives end by event, not by timer | Not “always 8 minutes”; not `480000` unless that species documents a timer; not camera Z; not clip length |
+| **Narrative arc** | What *happens* in that life — the story ecology writes | Not a countdown bar alone |
 | **Solidification** | Freeze one seeded run (genome + clock + both expressions) for replay | Not A/V from two different processes |
 | **Slice / excerpt** | Timed window of a solidified run (e.g. 2 min Black Dove) | Not the whole life compressed |
 | **Social / chronicle learning** | `SocialPool` / scar events biasing later individuals | Not pixel or audio stream sync |
@@ -125,20 +125,29 @@ Same tick. Same snapshot. Neither masters the other.
 
 ### 3. Lifeline + narrative (ecology)
 
-Works age. **There is no studio-wide lifeline duration.** Eight minutes (`480000` ms) is a **One Row / Centered catalog value** in some sketches — not Machine DNA law. Other species use other lifespans (kernel examples use 3600 s; demo machines vary; N150 pieces may run all day).
+**Lifeline is life — not eight minutes.**
 
-**Lifeline is ecology, not a copied constant.** It means:
+Teaching picture (compose your own species; this is the idea, not a required plot):
 
-- the organism has a **life** (birth → stages → end or rebirth)  
-- **things happen** inside that life (narrative arc, scars, surrender)  
-- end may be **time**, **narrative completion** (silence → black), or **species rules** documented in catalog  
+> There are bird eggs. They hatch. Some newborns fall from the nest and die. Some are aggressive and attack the others. Some are protected by the mother. Some are neutral and simply survive.
+
+That is a **lifeline**: a life in which **things happen**. Outcomes differ by temperament and event. There is no universal stopwatch. A HUD bar that fills in `480000` ms is one **implementation choice** for one catalog entry (One Row) — not the meaning of Machine DNA.
+
+Works age. **There is no studio-wide lifeline duration.** Other species use other ecologies (kernel examples vary; N150 pieces may run all day; some lives end when the narrative completes — silence → black — not when a timer hits).
+
+**Lifeline means:**
+
+- the organism has a **life** (birth → events → stages → end or rebirth)  
+- **things happen** (aggression, protection, fall, scar, surrender, survival)  
+- end may be **event-driven**, **narrative completion**, **species rules**, or — only if catalog says so — a **timer**  
 
 Before setting `LIFESPAN_MS` (or equivalent) in code, read **`catalog/{species}/{artwork}.md`**. Agents must **not** impose `480000` on a piece unless that catalog entry says so.
 
-Every life also has dramatic shape (compose per species), e.g.:
+Sound and image co-create that life’s shape (compose per species), e.g.:
 
 - Slow → pulse → crescendo → taper  
 - Strong → hold → drop → second crest → **silence → black** → rebirth  
+- Nest ecology: hatch → conflict / care / fall → who remains 
 
 ### 4. Many bodies, one organism
 
