@@ -87,8 +87,8 @@ Black Dove / N150 narrative pieces are **Type 1** unless you explicitly document
 | **Organism** | Running life: age, stage, phases (ecology) | Not a static export |
 | **Body** | Host channel: browser, N150, wall, Black Dove file, OF, PD, LED | Not a convenience fork of the art |
 | **Expression** | Phenotype reads the same snapshot — `visualExpress` · `soundExpress` | Not a second PRNG; not “soundtrack later” |
-| **Lifeline** | Time-bounded life → rebirth or death (ecology) | Not camera Z; not automatically = clip length |
-| **Narrative arc** | Dramatic shape *inside* one life | Not the same as duration |
+| **Lifeline** | Ecology of a life: aging, stages, end condition (death / rebirth / silence→black). **Duration is per species** — read catalog / `{artwork}.md`; never assume a studio-wide constant | Not 8 minutes globally; not `480000` unless that species documents it; not camera Z; not clip length |
+| **Narrative arc** | Dramatic shape *inside* one life — things happen; build, crest, fall, silence | Not the same as lifeline duration; arc can complete before or after a nominal lifespan |
 | **Solidification** | Freeze one seeded run (genome + clock + both expressions) for replay | Not A/V from two different processes |
 | **Slice / excerpt** | Timed window of a solidified run (e.g. 2 min Black Dove) | Not the whole life compressed |
 | **Social / chronicle learning** | `SocialPool` / scar events biasing later individuals | Not pixel or audio stream sync |
@@ -125,9 +125,17 @@ Same tick. Same snapshot. Neither masters the other.
 
 ### 3. Lifeline + narrative (ecology)
 
-Works age. Duration is **per species / catalog entry**.
+Works age. **There is no studio-wide lifeline duration.** Eight minutes (`480000` ms) is a **One Row / Centered catalog value** in some sketches — not Machine DNA law. Other species use other lifespans (kernel examples use 3600 s; demo machines vary; N150 pieces may run all day).
 
-Every life has dramatic shape (compose per species), e.g.:
+**Lifeline is ecology, not a copied constant.** It means:
+
+- the organism has a **life** (birth → stages → end or rebirth)  
+- **things happen** inside that life (narrative arc, scars, surrender)  
+- end may be **time**, **narrative completion** (silence → black), or **species rules** documented in catalog  
+
+Before setting `LIFESPAN_MS` (or equivalent) in code, read **`catalog/{species}/{artwork}.md`**. Agents must **not** impose `480000` on a piece unless that catalog entry says so.
+
+Every life also has dramatic shape (compose per species), e.g.:
 
 - Slow → pulse → crescendo → taper  
 - Strong → hold → drop → second crest → **silence → black** → rebirth  
@@ -185,7 +193,7 @@ Site organism host code (`walhimer.github.io/machine-aesthetic/emergent-dna/`) i
 2. Species named (`speciesId`) — new work may found a new species  
 3. Seed minted (Type 1 / Hybrid core) or relational rules stated (Type 2)  
 4. Genotype from **this** package (or documented fork + version)  
-5. Lifeline + narrative arc documented  
+5. Lifeline + narrative arc documented **per species** (no global `480000` / 8 min unless catalog says so)  
 6. Dual expression (or explicitly mute / votive)  
 7. Bodies listed (browser · N150 · wall · Black Dove · OF · PD · …)  
 8. Solidification / slice rule if exporting  
