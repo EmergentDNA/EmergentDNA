@@ -83,8 +83,8 @@ Black Dove / N150 narrative pieces are **Type 1** unless you explicitly document
 |------|---------|----------|
 | **DNA / genome** | Seed + PRNG + trait rules (this repo) | Not the MP4; not the p5 file alone |
 | **Species** | One lineage with a shared trait/gene contract (`speciesId` / catalog series). Many species can coexist; founding a new one does not retire the old | Not “Machine DNA” (= the whole system); not one sketch file |
-| **Individual** | One expressed genome under a species | |
-| **Organism** | Running life: age, stage, phases (ecology) | Not a static export |
+| **Individual** | One artwork — one egg in the nest; one seed’s life under a species | Not “all pieces share one 8‑minute life” |
+| **Organism** | That artwork running: its age, temperament, events, survival or death | Not a static export |
 | **Body** | Host channel: browser, N150, wall, Black Dove file, OF, PD, LED | Not a convenience fork of the art |
 | **Expression** | Phenotype reads the same snapshot — `visualExpress` · `soundExpress` | Not a second PRNG; not “soundtrack later” |
 | **Lifeline** | **Life itself** — birth, events, temperament, death or survival — not a studio clock. Duration (if any) is per species; some lives end by event, not by timer | Not “always 8 minutes”; not `480000` unless that species documents a timer; not camera Z; not clip length |
@@ -129,19 +129,18 @@ Same tick. Same snapshot. Neither masters the other.
 
 Teaching picture (compose your own species; this is the idea, not a required plot):
 
-> There are bird eggs. They hatch. Some newborns fall from the nest and die. Some are aggressive and attack the others. Some are protected by the mother. Some are neutral and simply survive.
+> There are bird eggs. **Each egg is an artwork** — an individual born from the species’ genome (a seed). They hatch. Some are born and die very quickly. Some are aggressive and kill other newborns. Some are protected by the mother. Some are neutral and live a long life.
 
-That is a **lifeline**: a life in which **things happen**. Outcomes differ by temperament and event. There is no universal stopwatch. A HUD bar that fills in `480000` ms is one **implementation choice** for one catalog entry (One Row) — not the meaning of Machine DNA.
-
-Works age. **There is no studio-wide lifeline duration.** Other species use other ecologies (kernel examples vary; N150 pieces may run all day; some lives end when the narrative completes — silence → black — not when a timer hits).
+There is **no set pattern** and **no shared stopwatch**. One artwork’s life is not another’s. That is why agents must never force every piece to `480000` ms / eight minutes — that was One Row convenience code, not Machine DNA.
 
 **Lifeline means:**
 
-- the organism has a **life** (birth → events → stages → end or rebirth)  
-- **things happen** (aggression, protection, fall, scar, surrender, survival)  
-- end may be **event-driven**, **narrative completion**, **species rules**, or — only if catalog says so — a **timer**  
+- each **artwork** (individual / seed) has a **life** of its own  
+- **things happen** in that life (aggression, protection, fall, scar, surrender, survival)  
+- outcomes and duration **differ per artwork** — short life, long life, cut short by conflict, carried by care  
+- end may be **event-driven**, **narrative completion**, **species rules**, or — only if *that* artwork’s catalog entry says so — a **timer**  
 
-Before setting `LIFESPAN_MS` (or equivalent) in code, read **`catalog/{species}/{artwork}.md`**. Agents must **not** impose `480000` on a piece unless that catalog entry says so.
+Before setting `LIFESPAN_MS` (or equivalent) in code, read **`catalog/{species}/{artwork}.md` for that piece**. Agents must **not** impose `480000` unless that catalog entry says so.
 
 Sound and image co-create that life’s shape (compose per species), e.g.:
 
